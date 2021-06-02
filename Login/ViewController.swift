@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mensajeBienvenida: CLTypingLabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        mensajeBienvenida.text = "Hola a todos, esta es una prueba del cltyping label, un pod para xcode"
     }
 
 

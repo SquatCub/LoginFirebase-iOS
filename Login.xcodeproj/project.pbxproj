@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		23F4B58AA87DA375F2AD5C72 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DC92AB44B1E7A257189981 /* Pods_Login.framework */; };
+		ACA9066126674E9B00C7F143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */; };
+		ACC7457D2665D0F00032A03C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ACC7457C2665D0F00032A03C /* Podfile */; };
 		ACF2B79C2665AB7E0037B698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79B2665AB7E0037B698 /* AppDelegate.swift */; };
 		ACF2B79E2665AB7E0037B698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79D2665AB7E0037B698 /* SceneDelegate.swift */; };
 		ACF2B7A02665AB7E0037B698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79F2665AB7E0037B698 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		70ADFD5E1D5CBEEAFF1A55B0 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		A25DFE9032BE45EA785CD742 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACC7457C2665D0F00032A03C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		ACF2B7982665AB7E0037B698 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2B79B2665AB7E0037B698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF2B79D2665AB7E0037B698 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				A25DFE9032BE45EA785CD742 /* Pods-Login.debug.xcconfig */,
 				70ADFD5E1D5CBEEAFF1A55B0 /* Pods-Login.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -65,6 +68,7 @@
 			children = (
 				ACF2B79A2665AB7E0037B698 /* Login */,
 				ACF2B7992665AB7E0037B698 /* Products */,
+				ACC7457C2665D0F00032A03C /* Podfile */,
 				81A413CD8FF0BD7725BDB780 /* Pods */,
 				8C097CFD4411E0F1EB081886 /* Frameworks */,
 			);
@@ -88,6 +92,7 @@
 				ACF2B7A42665AB810037B698 /* Assets.xcassets */,
 				ACF2B7A62665AB810037B698 /* LaunchScreen.storyboard */,
 				ACF2B7A92665AB810037B698 /* Info.plist */,
+				ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -153,6 +158,8 @@
 			files = (
 				ACF2B7A82665AB810037B698 /* LaunchScreen.storyboard in Resources */,
 				ACF2B7A52665AB810037B698 /* Assets.xcassets in Resources */,
+				ACA9066126674E9B00C7F143 /* GoogleService-Info.plist in Resources */,
+				ACC7457D2665D0F00032A03C /* Podfile in Resources */,
 				ACF2B7A32665AB7E0037B698 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,11 +366,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PNPAL8AJPL;
 				INFOPLIST_FILE = Login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itmorelia.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itmorelia.bran.Login;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,11 +387,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PNPAL8AJPL;
 				INFOPLIST_FILE = Login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itmorelia.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itmorelia.bran.Login;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
