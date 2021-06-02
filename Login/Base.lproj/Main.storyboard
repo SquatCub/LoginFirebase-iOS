@@ -147,7 +147,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="YSA-2E-DN8"/>
                     <connections>
-                        <segue destination="3vE-7X-zHK" kind="show" id="PVM-Md-1lf"/>
+                        <segue destination="3vE-7X-zHK" kind="show" identifier="login" id="PVM-Md-1lf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByR-JZ-Pq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
         <!--Registro-->
         <scene sceneID="45E-Nz-ZZw">
             <objects>
-                <viewController id="HJD-fd-iUp" sceneMemberID="viewController">
+                <viewController id="HJD-fd-iUp" customClass="RegistrarViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wMq-ow-ECq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +221,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registrarButton:" destination="HJD-fd-iUp" eventType="touchUpInside" id="bXb-SK-Bnf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cuK-lm-o6e"/>
@@ -233,7 +236,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="8MW-cl-Dah"/>
                     <connections>
-                        <segue destination="3vE-7X-zHK" kind="show" id="ubj-m4-UkS"/>
+                        <outlet property="contraseñaTextField" destination="Oe0-vo-tTc" id="9AW-rQ-42M"/>
+                        <outlet property="correoTextField" destination="AP2-Hr-c4L" id="Jll-mb-9aI"/>
+                        <outlet property="nombreTextField" destination="BUj-yQ-sz7" id="AuY-ik-H97"/>
+                        <segue destination="3vE-7X-zHK" kind="show" identifier="registro" id="ubj-m4-UkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC9-og-1Ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
