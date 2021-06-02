@@ -77,7 +77,7 @@
         <!--Login-->
         <scene sceneID="Wuh-iS-c87">
             <objects>
-                <viewController id="NJ5-zB-mBZ" sceneMemberID="viewController">
+                <viewController id="NJ5-zB-mBZ" customClass="LoginViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygS-NU-Ti6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +133,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="NJ5-zB-mBZ" eventType="touchUpInside" id="IuB-aR-Txr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0F9-sa-O90"/>
@@ -147,6 +150,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="YSA-2E-DN8"/>
                     <connections>
+                        <outlet property="contraseñaTextField" destination="tQl-84-7Pc" id="GAI-cx-eJO"/>
+                        <outlet property="correoTextField" destination="JlO-4h-4ss" id="2eS-h3-Q7t"/>
                         <segue destination="3vE-7X-zHK" kind="show" identifier="login" id="PVM-Md-1lf"/>
                     </connections>
                 </viewController>

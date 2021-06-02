@@ -1,5 +1,5 @@
 //
-//  RegistrarViewController.swift
+//  LoginViewController.swift
 //  Login
 //
 //  Created by Brandon Rodriguez Molina on 02/06/21.
@@ -8,9 +8,8 @@
 import UIKit
 import FirebaseAuth
 
-class RegistrarViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var correoTextField: UITextField!
     @IBOutlet weak var contraseñaTextField: UITextField!
     override func viewDidLoad() {
@@ -18,23 +17,21 @@ class RegistrarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    @IBAction func registrarButton(_ sender: UIButton) {
+    @IBAction func loginButton(_ sender: UIButton) {
         if let email = correoTextField.text, let password = contraseñaTextField.text  {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print("Error al crear usuario \(e.localizedDescription)")
+                    print(e.localizedDescription)
                     var msj = ""
                     switch e.localizedDescription {
-                        case "The email address is already in use by another account.":
-                            msj = "Correo ya en uso por otro usuario"
+                        case "The password is invalid or the user does not have a password.":
+                            msj = "Constraseña incorrecta"
+                        break
+                        case "There is no user record corresponding to this identifier. The user may have been deleted.":
+                            msj = "Usuario no valido"
                         break
                         case "The email address is badly formatted.":
                             msj = "Correo con formato incorrecto"
-                        break
-                        case "The password must be 6 characters long or more.":
-                            msj = "La contraseña debe tener mas de 6 caracteres "
                         break
                         default:
                             msj = "Error desconocido"
@@ -42,7 +39,7 @@ class RegistrarViewController: UIViewController {
                     }
                     self.mensajeAlerta(mensaje: msj)
                 } else {
-                    self.performSegue(withIdentifier: "registro", sender: self)
+                    self.performSegue(withIdentifier: "login", sender: self)
                 }
             }
         }
@@ -53,6 +50,8 @@ class RegistrarViewController: UIViewController {
         alerta.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
         present(alerta, animated: true, completion: nil)
     }
+    
+
     /*
     // MARK: - Navigation
 
