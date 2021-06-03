@@ -12,6 +12,8 @@
 		ACA906892667556400C7F143 /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA906882667556400C7F143 /* RegistrarViewController.swift */; };
 		ACA9068C26675CB500C7F143 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9068B26675CB500C7F143 /* LoginViewController.swift */; };
 		ACC7457D2665D0F00032A03C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ACC7457C2665D0F00032A03C /* Podfile */; };
+		ACEEFCA42668A10900489163 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEEFCA32668A10900489163 /* InicioViewController.swift */; };
+		ACEEFCA72668A53500489163 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEEFCA62668A53500489163 /* Mensaje.swift */; };
 		ACF2B79C2665AB7E0037B698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79B2665AB7E0037B698 /* AppDelegate.swift */; };
 		ACF2B79E2665AB7E0037B698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79D2665AB7E0037B698 /* SceneDelegate.swift */; };
 		ACF2B7A02665AB7E0037B698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2B79F2665AB7E0037B698 /* ViewController.swift */; };
@@ -26,7 +28,9 @@
 		ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACA906882667556400C7F143 /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
 		ACA9068B26675CB500C7F143 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		ACC7457C2665D0F00032A03C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		ACC7457C2665D0F00032A03C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ACEEFCA32668A10900489163 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		ACEEFCA62668A53500489163 /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		ACF2B7982665AB7E0037B698 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2B79B2665AB7E0037B698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF2B79D2665AB7E0037B698 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */,
 				ACA906882667556400C7F143 /* RegistrarViewController.swift */,
 				ACA9068B26675CB500C7F143 /* LoginViewController.swift */,
+				ACEEFCA32668A10900489163 /* InicioViewController.swift */,
+				ACEEFCA62668A53500489163 /* Mensaje.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF2B7A02665AB7E0037B698 /* ViewController.swift in Sources */,
+				ACEEFCA72668A53500489163 /* Mensaje.swift in Sources */,
+				ACEEFCA42668A10900489163 /* InicioViewController.swift in Sources */,
 				ACF2B79C2665AB7E0037B698 /* AppDelegate.swift in Sources */,
 				ACA906892667556400C7F143 /* RegistrarViewController.swift in Sources */,
 				ACA9068C26675CB500C7F143 /* LoginViewController.swift in Sources */,
