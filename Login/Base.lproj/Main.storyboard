@@ -331,11 +331,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="B0l-yq-hj0">
-                        <barButtonItem key="rightBarButtonItem" title="Salir" id="dXK-Ns-Yrk">
-                            <connections>
-                                <action selector="salirButton:" destination="3vE-7X-zHK" id="gTV-vU-Xai"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Salir" id="dXK-Ns-Yrk">
+                                <connections>
+                                    <action selector="salirButton:" destination="3vE-7X-zHK" id="gTV-vU-Xai"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="person.fill" catalog="system" id="36Q-WQ-uvQ">
+                                <connections>
+                                    <segue destination="Klp-VL-Ngx" kind="show" id="oHn-Wm-FEL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mensaje" destination="uUH-Zx-mOi" id="dec-Kk-dkW"/>
@@ -345,6 +352,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPy-se-oGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2584.8000000000002" y="120.98950524737631"/>
+        </scene>
+        <!--Editar datos-->
+        <scene sceneID="Dpt-0i-OyG">
+            <objects>
+                <viewController id="Klp-VL-Ngx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="auL-2y-KYF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-fi-n0I">
+                                <rect key="frame" x="67" y="60" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gt1-Kb-UDM">
+                                <rect key="frame" x="139" y="218" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8G-2h-S5S">
+                                <rect key="frame" x="159" y="302" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guardar"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="265-ra-OgX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar datos" id="VRQ-zy-Mkb">
+                        <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="fnp-Mb-zhM"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcT-2y-q9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3327" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="upZ-3w-3wi">
@@ -372,6 +414,7 @@
         <segue reference="PVM-Md-1lf"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
