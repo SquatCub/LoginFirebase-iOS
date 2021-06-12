@@ -7,9 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegistrarViewController: UIViewController {
-
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var correoTextField: UITextField!
     @IBOutlet weak var contraseñaTextField: UITextField!
@@ -21,7 +23,7 @@ class RegistrarViewController: UIViewController {
     
 
     @IBAction func registrarButton(_ sender: UIButton) {
-        if let email = correoTextField.text, let password = contraseñaTextField.text  {
+        if let email = correoTextField.text, let nombre = nombreTextField.text,  let password = contraseñaTextField.text  {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print("Error al crear usuario \(e.localizedDescription)")
@@ -42,6 +44,16 @@ class RegistrarViewController: UIViewController {
                     }
                     self.mensajeAlerta(mensaje: msj)
                 } else {
+                    let documentoNombre = email
+                    self.db.collection("perfiles").document(documentoNombre).setData(["usuario": email, "nombre": nombre, "imagen": "noimage"]) { (error) in
+                        //En caso de error
+                        if let e = error {
+                            print("Error al guardar en Firestore \(e.localizedDescription)")
+                        } else {
+                            //En caso de enviar
+                            print("Se guardo la info en firestore")
+                        }
+                    }
                     self.performSegue(withIdentifier: "registro", sender: self)
                 }
             }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		23F4B58AA87DA375F2AD5C72 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DC92AB44B1E7A257189981 /* Pods_Login.framework */; };
 		AC88AE092674804300E69729 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88AE082674804300E69729 /* PerfilViewController.swift */; };
+		AC88AE24267495D300E69729 /* MensajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88AE22267495D300E69729 /* MensajeTableViewCell.swift */; };
+		AC88AE25267495D300E69729 /* MensajeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AE23267495D300E69729 /* MensajeTableViewCell.xib */; };
 		ACA9066126674E9B00C7F143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */; };
 		ACA906892667556400C7F143 /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA906882667556400C7F143 /* RegistrarViewController.swift */; };
 		ACA9068C26675CB500C7F143 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9068B26675CB500C7F143 /* LoginViewController.swift */; };
@@ -28,6 +30,8 @@
 		70ADFD5E1D5CBEEAFF1A55B0 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		A25DFE9032BE45EA785CD742 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		AC88AE082674804300E69729 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		AC88AE22267495D300E69729 /* MensajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensajeTableViewCell.swift; sourceTree = "<group>"; };
+		AC88AE23267495D300E69729 /* MensajeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MensajeTableViewCell.xib; sourceTree = "<group>"; };
 		ACA9066026674E9B00C7F143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACA906882667556400C7F143 /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
 		ACA9068B26675CB500C7F143 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				ACEEFCA32668A10900489163 /* InicioViewController.swift */,
 				ACEEFCA62668A53500489163 /* Mensaje.swift */,
 				AC88AE082674804300E69729 /* PerfilViewController.swift */,
+				AC88AE22267495D300E69729 /* MensajeTableViewCell.swift */,
+				AC88AE23267495D300E69729 /* MensajeTableViewCell.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF2B7A82665AB810037B698 /* LaunchScreen.storyboard in Resources */,
+				AC88AE25267495D300E69729 /* MensajeTableViewCell.xib in Resources */,
 				ACF2B7A52665AB810037B698 /* Assets.xcassets in Resources */,
 				ACA9066126674E9B00C7F143 /* GoogleService-Info.plist in Resources */,
 				ACC7457D2665D0F00032A03C /* Podfile in Resources */,
@@ -236,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC88AE24267495D300E69729 /* MensajeTableViewCell.swift in Sources */,
 				ACF2B7A02665AB7E0037B698 /* ViewController.swift in Sources */,
 				ACEEFCA72668A53500489163 /* Mensaje.swift in Sources */,
 				ACEEFCA42668A10900489163 /* InicioViewController.swift in Sources */,

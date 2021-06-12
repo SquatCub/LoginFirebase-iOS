@@ -19,7 +19,10 @@ class InicioViewController: UIViewController {
     @IBOutlet weak var tabla: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let nib = UINib(nibName: "MensajeTableViewCell", bundle: nil)
+        tabla.register(nib, forCellReuseIdentifier: "celdaMensaje")
+        
         navigationItem.hidesBackButton = true
         
         cargarMensajes()
@@ -87,9 +90,9 @@ extension InicioViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tabla.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        celda.textLabel?.text = mensajes[indexPath.row].cuerpo
-        celda.detailTextLabel?.text = mensajes[indexPath.row].remitente
+        let celda = tabla.dequeueReusableCell(withIdentifier: "celdaMensaje", for: indexPath) as! MensajeTableViewCell
+        celda.mensaje.text = mensajes[indexPath.row].cuerpo
+        celda.contacto.text = mensajes[indexPath.row].remitente
         return celda
     }
     
