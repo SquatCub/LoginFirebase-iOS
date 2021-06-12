@@ -97,7 +97,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlO-4h-4ss">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bran@g.com" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlO-4h-4ss">
                                         <rect key="frame" x="27.5" y="38.5" width="300" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="aOa-xs-a0g"/>
@@ -111,7 +111,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-84-7Pc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-84-7Pc">
                                         <rect key="frame" x="27.5" y="129" width="300" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="aA7-xk-OEP"/>
@@ -356,7 +356,7 @@
         <!--Editar datos-->
         <scene sceneID="Dpt-0i-OyG">
             <objects>
-                <viewController id="Klp-VL-Ngx" sceneMemberID="viewController">
+                <viewController id="Klp-VL-Ngx" customClass="PerfilViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="auL-2y-KYF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,6 +364,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-fi-n0I">
                                 <rect key="frame" x="67" y="60" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84081535529999996" green="0.37514950720000001" blue="0.13822346620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gt1-Kb-UDM">
                                 <rect key="frame" x="139" y="218" width="97" height="34"/>
@@ -375,6 +376,9 @@
                                 <rect key="frame" x="159" y="302" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarDatos:" destination="Klp-VL-Ngx" eventType="touchUpInside" id="fDW-eU-mgf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="265-ra-OgX"/>
@@ -383,6 +387,9 @@
                     <navigationItem key="navigationItem" title="Editar datos" id="VRQ-zy-Mkb">
                         <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="fnp-Mb-zhM"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imagenPerfil" destination="cWy-fi-n0I" id="fqg-dE-M7N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcT-2y-q9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
