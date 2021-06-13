@@ -20,6 +20,11 @@ class InicioViewController: UIViewController {
         
         cargarMensajes()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabla.reloadData()
+    }
+    
     func cargarMensajes() {
         db.collection("mensajes").order(by: "fecha").addSnapshotListener() { (querySnapshot, err) in
             //Vaciar arreglo de chats
