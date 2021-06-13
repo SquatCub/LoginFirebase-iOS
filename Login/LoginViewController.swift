@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  Login
-//
-//  Created by Brandon Rodriguez Molina on 02/06/21.
-//
-
 import UIKit
 import FirebaseAuth
 
@@ -15,8 +8,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
     @IBAction func loginButton(_ sender: UIButton) {
         if let email = correoTextField.text, let password = contraseñaTextField.text  {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -51,15 +44,11 @@ class LoginViewController: UIViewController {
         present(alerta, animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "login" {
+            let destino = segue.destination as! InicioViewController
+            destino.nombreUsuario = correoTextField.text
+        }
     }
-    */
 
 }

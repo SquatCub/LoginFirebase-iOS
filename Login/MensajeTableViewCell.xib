@@ -30,8 +30,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-pD-z9F" userLabel="Stack View Celda">
                                                 <rect key="frame" x="10" y="0.0" width="323" height="70"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-05-13 at 20.34.36" translatesAutoresizingMaskIntoConstraints="NO" id="bfH-0w-02B">
-                                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bfH-0w-02B">
+                                                        <rect key="frame" x="0.0" y="16.5" width="50" height="47"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="IIR-2X-voP"/>
                                                             <constraint firstAttribute="width" constant="50" id="WoR-6n-HaQ"/>
@@ -108,7 +108,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Screen Shot 2021-05-13 at 20.34.36" width="338" height="384"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

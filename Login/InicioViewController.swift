@@ -1,16 +1,9 @@
-//
-//  InicioViewController.swift
-//  Login
-//
-//  Created by Brandon Rodriguez Molina on 03/06/21.
-//
-
 import UIKit
 import Firebase
 import FirebaseFirestore
 
 class InicioViewController: UIViewController {
-
+    var nombreUsuario: String?
     var mensajes = [Mensaje]()
     
     let db = Firestore.firestore()
@@ -42,6 +35,8 @@ class InicioViewController: UIViewController {
                         //Obtener parametros
                         guard let remitenteFS = datos["remitente"] as? String else { return }
                         guard let mensajeFS = datos["mensaje"] as? String else { return }
+                        
+                        
                         //Crear objeto y agregarlo al arreglo
                         let nuevoMensaje = Mensaje(remitente: remitenteFS, cuerpo: mensajeFS)
                         self.mensajes.append(nuevoMensaje)
@@ -82,6 +77,14 @@ class InicioViewController: UIViewController {
             print("Error al salir ", signOutError)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "perfil" {
+            let destino = segue.destination as! PerfilViewController
+            destino.nombreUsuario = nombreUsuario!
+        }
+    }
+    
 }
 
 extension InicioViewController: UITableViewDelegate, UITableViewDataSource {
@@ -93,6 +96,28 @@ extension InicioViewController: UITableViewDelegate, UITableViewDataSource {
         let celda = tabla.dequeueReusableCell(withIdentifier: "celdaMensaje", for: indexPath) as! MensajeTableViewCell
         celda.mensaje.text = mensajes[indexPath.row].cuerpo
         celda.contacto.text = mensajes[indexPath.row].remitente
+        
+        let perfil = self.db.collection("perfiles").document(mensajes[indexPath.row].remitente)
+        perfil.getDocument{ (document, error) in
+            if let document = document, document.exists {
+                celda.contacto.text = "De: \(document.data()!["nombre"]!)"
+                let urlString = document.data()!["imagen"] as? String
+                let url = URL(string: urlString!)
+
+                DispatchQueue.main.async { [weak self] in
+                    if let data = try? Data(contentsOf: url!) {
+                        if let image = UIImage(data: data) {
+                            DispatchQueue.main.async {
+                                celda.imagenContacto.image = image
+                            }
+                        }
+                    }
+                }
+                } else {
+                    print("Document does not exist")
+                }
+        }
+        
         return celda
     }
     
