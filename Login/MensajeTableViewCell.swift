@@ -14,7 +14,7 @@ class MensajeTableViewCell: UITableViewCell {
     @IBOutlet weak var contacto: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imagenContacto.layer.cornerRadius = 25
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

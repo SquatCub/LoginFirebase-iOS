@@ -28,6 +28,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate & 
         gestura.numberOfTouchesRequired = 1
         imagenPerfil.addGestureRecognizer(gestura)
         imagenPerfil.isUserInteractionEnabled = true
+        imagenPerfil.layer.cornerRadius = 100
     }
     
     @objc func clickImagen(gestura: UITapGestureRecognizer) {

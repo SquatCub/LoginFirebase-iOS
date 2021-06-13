@@ -15,7 +15,7 @@ class InicioViewController: UIViewController {
         
         let nib = UINib(nibName: "MensajeTableViewCell", bundle: nil)
         tabla.register(nib, forCellReuseIdentifier: "celdaMensaje")
-        
+        tabla.backgroundColor = UIColor.clear
         navigationItem.hidesBackButton = true
         
         cargarMensajes()

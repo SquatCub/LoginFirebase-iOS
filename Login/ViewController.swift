@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mensajeBienvenida.text = "Hola a todos, esta es una prueba del cltyping label, un pod para xcode"
+        mensajeBienvenida.text = "Hola y bienvenido a esta app de mensajeria donde podrás chatear con todo mundo en el chat general!"
     }
 
 
